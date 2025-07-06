@@ -1,4 +1,11 @@
 <?php require_once 'Crud.php'; ?>
+<?php
+    session_start();
+    if(!isset($_SESSION['logado']) || $_SESSION['logado'] !== true){
+        header("Location: ../index.html");
+        exit;
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
