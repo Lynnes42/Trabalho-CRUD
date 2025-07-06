@@ -28,7 +28,7 @@ $produto = mysqli_fetch_assoc($result);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar produto</title>
+    <title>Editar produtos</title>
 </head>
 <body>
     <h1>Edição de produtos</h1>
