@@ -1,0 +1,68 @@
+/* Estilo profissional para o painel - usa mesma paleta */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f2f1;
+    color: #004d40;
+}
+
+/* Centralizar conteúdo vertical e horizontalmente */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container principal */
+.container {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 77, 64, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    color: #00796b;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Estilo dos botões do painel */
+.button-link,
+input[type="button"] {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    min-width: 180px;
+}
+
+.button-link:hover,
+input[type="button"]:hover {
+    background-color: #e65b50;
+}
+
+/* (Opcional) Espaço para tabela de produtos futuramente */
+.table-area {
+    margin-top: 40px;
+}

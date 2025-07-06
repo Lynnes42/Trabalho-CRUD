@@ -1,0 +1,111 @@
+/* Estilo para a página de busca de produtos */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f2f1;
+    color: #004d40;
+}
+
+/* Centralização vertical e horizontal */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container principal */
+.container {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 77, 64, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Título */
+h2 {
+    color: #00796b;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* Formulário de busca */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    color: #004d40;
+    text-align: left;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #80cbc4;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+input[type="submit"],
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    min-width: 150px;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #e65b50;
+}
+
+/* Tabela de resultados */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+table thead {
+    background-color: #b2dfdb;
+}
+
+table th, table td {
+    padding: 12px 10px;
+    border: 1px solid #80cbc4;
+    text-align: left;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f1fdfb;
+}
+
+/* Mensagem de nenhum resultado */
+p {
+    margin-top: 20px;
+    font-weight: 600;
+    color: #c62828;
+}
