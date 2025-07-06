@@ -30,7 +30,7 @@ function exibirFormulario($mensagem = '', $tipo = 'erro') {
             <input type="number" step="0.01" name="preco" required>
 
             <label for="quantidade">Quantidade:</label>
-            <input type="number" name="quantidade" min="1" required>
+            <input type="number" name="quantidade" min="" required>
 
             <label for="descricao">Descrição (opcional):</label>
             <input type="text" name="descricao">

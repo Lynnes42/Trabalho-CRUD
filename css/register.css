@@ -1,0 +1,101 @@
+/* Estilo profissional centralizado - Cadastro */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f2f1; /* fundo teal claro */
+    color: #004d40; /* texto teal escuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 77, 64, 0.1);
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1 {
+    color: #00796b;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+form legend {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #004d40;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #80cbc4;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #ff6f61;
+    outline: none;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+form input[type="reset"] {
+    background-color: #9e9e9e;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e65b50;
+}
+
+form input[type="reset"]:hover {
+    background-color: #7d7d7d;
+}
+
+.button-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #e65b50;
+}

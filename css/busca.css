@@ -1,5 +1,4 @@
-/* Estilo para a página de busca de produtos */
-
+/* Reset e base */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,11 +12,8 @@ html, body {
     color: #004d40;
 }
 
-/* Centralização vertical e horizontal */
+/* Layout sem centralização vertical para evitar sumiço */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 20px;
 }
 
@@ -28,6 +24,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 77, 64, 0.1);
     max-width: 800px;
+    margin: 40px auto;
     width: 100%;
     text-align: center;
 }
@@ -61,6 +58,12 @@ input[type="text"] {
     margin-bottom: 12px;
 }
 
+/* Centralizar o botão de buscar */
+.botoes-centro {
+    text-align: center;
+}
+
+/* Botões padrão */
 input[type="submit"],
 button {
     background-color: #ff6f61;
@@ -81,12 +84,38 @@ button:hover {
     background-color: #e65b50;
 }
 
-/* Tabela de resultados */
+/* Botões específicos */
+button.editar {
+    background-color: #4db6ac;
+}
+
+button.editar:hover {
+    background-color: #39988d;
+}
+
+button.remover {
+    background-color: #c62828;
+}
+
+button.remover:hover {
+    background-color: #a71f1f;
+}
+
+button.voltar {
+    margin-top: 30px;
+}
+
+/* Tabela responsiva */
+.table-wrapper {
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
     font-size: 0.95rem;
+    min-width: 700px;
 }
 
 table thead {
@@ -103,7 +132,12 @@ table tbody tr:nth-child(even) {
     background-color: #f1fdfb;
 }
 
-/* Mensagem de nenhum resultado */
+img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+/* Mensagem de erro */
 p {
     margin-top: 20px;
     font-weight: 600;

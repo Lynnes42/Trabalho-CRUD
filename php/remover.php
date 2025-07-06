@@ -35,8 +35,26 @@ if (!isset($_GET['id'])) {
 $id = $_GET['id'];
 
 try {
-    $sql = "DELETE FROM produtos WHERE id = ?";
-    $stmt = $pdo->prepare($sql);
+    // 1. Buscar nome do arquivo de imagem
+    $stmt = $pdo->prepare("SELECT imagem FROM produtos WHERE id = ?");
+    $stmt->execute([$id]);
+    $produto = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if (!$produto) {
+        exibirMensagem("Produto não encontrado.");
+        exit;
+    }
+
+    $imagem = $produto['imagem'];
+    $caminhoImagem = __DIR__ . "/imagens/" . $imagem;
+
+    // 2. Excluir a imagem se existir
+    if (!empty($imagem) && file_exists($caminhoImagem)) {
+        unlink($caminhoImagem);
+    }
+
+    // 3. Excluir o registro do banco
+    $stmt = $pdo->prepare("DELETE FROM produtos WHERE id = ?");
     $stmt->execute([$id]);
 
     exibirMensagem("Registro removido com sucesso!", 'sucesso');

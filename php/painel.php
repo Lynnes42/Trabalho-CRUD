@@ -21,8 +21,6 @@ if (!isset($_SESSION['usuario_nome']) || !isset($_SESSION['usuario_id'])){
         <!-- Opçóes básicas do CRUD -->
         <input type="button" value="Adicionar produto" id="adicionarbtn" class="button-link">
         <input type="button" value="Buscar produto" id="buscarbtn" class="button-link">
-        <input type="button" value="Editar produto" id="editarbtn" class="button-link">
-        <input type="button" value="Remover produto" id="removerbtn" class="button-link">
 
         <!-- Opção de logout pelo usuario -->
         <input type="button" value="Sair" id="sairbtn" class="button-link">
