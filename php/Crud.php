@@ -50,6 +50,7 @@
             <?php endif; ?>
 
             <a href="Cadastrar.php">Cadastrar novo produto</a>
+            <a href="Pesquisa.php">Buscar produtos que deseja.</a>
 
     
 </body>
