@@ -50,8 +50,16 @@ $produto = mysqli_fetch_assoc($result);
         </div>
 
         <div>
-            <label for="imagem">Imagem (URL):</label>
-            <input type="text" id="imagem" name="imagem" value="<?= $produto['imagem']?>">
+           <label for="imagem">Imagem:</label>
+            <?php if(!empty($produto['imagem'])): ?>
+                <div>
+                    <img src="produtos/imagens/<?= $produto['imagem'] ?>" width="1.00">
+                    <br>
+                    <small>Imagem atual: <?= $produto['imagem'] ?></small>
+                </div>
+            <?php endif; ?>
+            <input type="file" id="imagem" name="imagem" accept=".jpg, .jpeg, .png">
+            <small>Apenas JPG, JPEG ou PNG (máx. 2MB)</small>
         </div>
 
         <button type="submit">Atualizar</button>
