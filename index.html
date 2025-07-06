@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CRUD</title>
+</head>
+<body>
+    <h1>Faça o login</h1>
+    <!-- Div de conteúdo: forms e botões -->
+    <div class="content">
+        <form action="php/auth.php" method="post">
+            <!-- Input do usuário -->
+            <legend>Email</legend>
+            <input type="email" name="email" placeholder="teste@teste.com" required>
+            <legend>Senha</legend>
+            <input type="password" name="senha" placeholder="*****" required>
+            
+            <!-- Butões -->
+            <input type="submit" value="Entrar"">
+            <input type="reset" value="Apagar">
+            <a href="register.html">Cadastrar</a>
+        </form>
+    </div>
+
+    <footer></footer>
+</body>
+</html>

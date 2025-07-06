@@ -1,11 +1,10 @@
-create database Login;
-
+create database Crud;
 use Login;
 
 create table usuarios(
 	id int auto_increment primary key,
     nome varchar(100),
-    email varchar(100),
+    email varchar(100) unique,
     senha varchar (255)
 );
 
