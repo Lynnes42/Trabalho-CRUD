@@ -34,8 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     try {
         $stmt = $pdo->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)");
         $stmt->execute([$nome, $email, $senhaHash]);
-        echo "Usuário registrado com sucesso!";
-        header("../painel.html");
+        // Set session variables to log the user in automatically
+        session_start();
+        $_SESSION['usuario_id'] = $pdo->lastInsertId();
+        $_SESSION['usuario_nome'] = $nome;
+
+        // Redirect to painel.php properly
+        header("Location: painel.php");
+        exit;
     } catch (PDOException $e) {
         echo "Erro ao registrar usuário: " . htmlspecialchars($e->getMessage());
     }
