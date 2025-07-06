@@ -1,4 +1,11 @@
 <?php require_once 'banco.php';
+<?php
+    session_start();
+    if(!isset($_SESSION['logado']) || $_SESSION['logado'] !== true){
+        header("Location: ../index.html");
+        exit;
+    }
+?>
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $id = isset($_POST['id']) ? $_POST['id'] : null;
