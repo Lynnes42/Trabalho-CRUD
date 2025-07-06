@@ -1,4 +1,12 @@
 <?php
+    session_start();
+    if(!isset($_SESSION['logado']) || $_SESSION['logado'] !== true){
+        header("Location: ../index.html");
+        exit;
+    }
+?>
+
+<?php
     $sql = "SELECT * FROM Produtos ORDER BY id DESC";
     $result = mysqli_query($conn, $sql);
     if(!$result){
