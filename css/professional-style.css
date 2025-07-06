@@ -1,0 +1,141 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f2f1;
+    color: #004d40;
+}
+
+/* Envolve tudo */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Centraliza o conteúdo principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container visual do formulário */
+.container {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    box-shadow: 0 4px 12px rgba(0, 77, 64, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Títulos */
+h1 {
+    color: #00796b;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+form label {
+    font-weight: 600;
+    color: #004d40;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="file"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #80cbc4;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #ff6f61;
+    outline: none;
+}
+
+/* Botões centralizados e compactos */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+button,
+input[type="submit"],
+a.button-link {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    min-width: 120px;
+}
+
+button:hover,
+input[type="submit"]:hover,
+a.button-link:hover {
+    background-color: #e65b50;
+}
+
+/* Mensagens */
+.message {
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.message.error {
+    background-color: #ffcdd2;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+/* Rodapé sempre no fim */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #00796b;
+    font-size: 0.9rem;
+}

@@ -3,27 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>CRUD</title>
+    <title>CRUD - Login</title>
+    <link rel="stylesheet" href="css/professional-style.css">
 </head>
 <body>
-    <h1>Faça o login</h1>
-    <!-- Div de conteúdo: forms e botões -->
-    <div class="content">
-        <form action="php/auth.php" method="post">
-            <!-- Input do usuário -->
-            <legend>Email</legend>
-            <input type="email" name="email" placeholder="teste@teste.com" required>
-            <legend>Senha</legend>
-            <input type="password" name="senha" placeholder="*****" required>
-            
-            <!-- Butões -->
-            <input type="submit" value="Entrar"">
-            <input type="reset" value="Apagar">
-            <a href="register.html">Cadastrar</a>
-        </form>
-    </div>
+    <div class="wrapper">
+        <main class="main-content">
+            <div class="container">
+                <h1>Faça o login</h1>
 
-    <footer></footer>
+                <div class="content">
+                    <form action="php/auth.php" method="post">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="teste@teste.com" required>
+
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="*****" required>
+
+                        <div class="form-actions">
+                            <input type="submit" value="Entrar" class="btn-sm">
+                            <a href="register.html" class="button-link btn-sm">Cadastrar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            &copy; 2025 Seu Sistema. Todos os direitos reservados.
+        </footer>
+    </div>
 </body>
 </html>

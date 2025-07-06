@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/professional-style.css">
 </head>
 <body>
-    <h1>Cadastre-se</h1>
-    <div class="content">
-        <form action="php/register.php" method="post">
-            <legend>Nome completo</legend>
-            <input type="text" name="nome" id="" required>
-            <legend>Email</legend>
-            <input type="email" name="email" id="" required>
-            <legend>Senha</legend>
-            <input type="password" name="senha" id="" required>
-            
-            <!-- Botões -->
-            <input type="submit" value="Cadastrar"">
-            <input type="reset" value="Cancelar">
-            
-        </form>
+    <div class="container">
+        <h1>Cadastre-se</h1>
+        <div class="content">
+            <form action="php/register.php" method="post">
+                <legend>Nome completo</legend>
+                <input type="text" name="nome" id="" required>
+                <legend>Email</legend>
+                <input type="email" name="email" id="" required>
+                <legend>Senha</legend>
+                <input type="password" name="senha" id="" required>
+                
+                <!-- Botões -->
+                <input type="submit" value="Cadastrar">
+                <input type="reset" value="Cancelar">
+            </form>
+            <a href="index.html" class="button-link">Voltar para Login</a>
+        </div>
     </div>
 </body>
 </html>
