@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $senha = $_POST["senha"] ?? '';
 
     if (empty($email) || empty($senha)) {
-        echo "Preencha todos os campos.";
+        header("Location: ../index.php?erro=" . urlencode("Preencha todos os campos."));
         exit;
     }
 
@@ -24,9 +24,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         header("Location: painel.php");
         exit;
     } else {
-        echo "Email ou senha incorretos!";
+        header("Location: ../index.php?erro=" . urlencode("Email ou senha incorretos!"));
+        exit;
     }
 } else {
-    echo "Acesso inválido";
+    header("Location: ../index.php?erro=" . urlencode("Acesso inválido"));
+    exit;
 }
 ?>
