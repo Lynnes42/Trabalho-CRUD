@@ -80,7 +80,7 @@ $termo = $_GET['termo'] ?? '';
 
 if ($termo !== '') {
     try {
-        $sql = "SELECT * FROM produtos WHERE nome LIKE ? OR descricao LIKE ?";
+        $sql = "SELECT * FROM produtos WHERE nome LIKE ? OR descricao LIKE ? ORDER BY data_criacao DESC";
         $stmt = $pdo->prepare($sql);
         $likeTermo = "%$termo%";
         $stmt->execute([$likeTermo, $likeTermo]);

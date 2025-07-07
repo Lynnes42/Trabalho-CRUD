@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Login</title>
+    <link rel="stylesheet" href="css/professional-style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <main class="main-content">
+            <div class="container">
+                <h1>Faça o login</h1>
+
+                <?php if (isset($_GET['erro'])): ?>
+                    <div class="error-message" style="color: red; margin-bottom: 15px;">
+                        <?= htmlspecialchars($_GET['erro']) ?>
+                    </div>
+                <?php endif; ?>
+
+                <div class="content">
+                    <form action="php/auth.php" method="post">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="teste@teste.com" required>
+
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="*****" required>
+
+                        <div class="form-actions">
+                            <input type="submit" value="Entrar" class="btn-sm">
+                            <a href="register.html" class="button-link btn-sm">Cadastrar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            &copy; 2025 CRUD - IFsuldeminas. Todos os direitos reservados.
+        </footer>
+    </div>
+</body>
+</html>
