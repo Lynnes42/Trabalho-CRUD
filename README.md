@@ -39,8 +39,10 @@ Este projeto foi construído utilizando as seguintes tecnologias:
 ## Demonstração (Vídeo)
 
 Confira uma demonstração do sistema em funcionamento:
-[Link para o Vídeo do YouTube](https://youtu.be/lA8NQWFmDMQ)
-[Link para a aplicação hospedada](http://trabalhocrud.infinityfreeapp.com/)
+
+[Link para o Vídeo do YouTube](https://youtu.be/lA8NQWFmDMQ) - explicação de como foi feito cada etapa do sistema.
+
+[Link para a aplicação hospedada](http://trabalhocrud.infinityfreeapp.com/) - hospedagem do sistema para um site real.
 
 ## Autores
 
